@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
 
 :root{
-    --bg: #212121;
-    --bg2: #3c3c3c;
-    --primary: #f06;
+    --bg: #87CEFA;
+    --bg2: #212121;
+    --primary: #0F234C;
     --base: #fff;
 }
 
@@ -19,22 +19,24 @@ body{
 }
 
 header{
-    background-color: var(--bg2);
+    background-color: var(--primary);
     display: flex;
 }
 
-header h1 a{
-    color: var(--primary);
+header .firsta{
+    color: var(--bg);
     font-family: 'bebas neue', sans-serif;
     font-size: 4rem;
     margin-left: 4rem;
+    padding-bottom: 1rem;
     padding-top: 1rem;
 }
 
 header nav{
     flex-grow: 1;
     display: flex;
-    padding-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    
 }
 
 header ul{
@@ -50,11 +52,11 @@ nav li:last-child{
 }
 
 nav a:hover{
-    color: var(--primary);
+    color: var(--bg);
 }
 
 nav .ativo{
-    border-bottom: var(--primary) 3px solid;
+    border-bottom: var(--bg) 3px solid;
     padding: .5rem;
 }
 
@@ -67,93 +69,96 @@ a{
     text-decoration: none;
 }
 
-#cabecalho{
+#hero{
     position: relative;
-    height: 20rem;
-    display: flex;
+    height: 18rem;
 }
 
-#cabecalho::before{
+/*pseudo-elemento = não existe no HTML*/
+#hero::before{
     position: absolute;
     content: "";
-    height: 90%;
+    height: 100%;
     width: 100%;
-    background: url(../assets/images/luca.jpg) center;
-    background-size: 100%;
+    background: url(../assets/images/MicrosoftTeams-image\ \(7\).png) center;
+    background-size: 70%;
     background-repeat: no-repeat;
-    background-position-y: 35%;
-    filter: opacity(.3);
+    background-position-y: 50%;
+    filter: opacity(.2);
     z-index:-1;
-    box-shadow: inset 0px -125px 120px var(--bg);
+    box-shadow: inset 0px -100px 100px var(--bg);
 }
 
-#cabecalho .titulo {
+#hero p {
     width: 60%;
-    padding: 1rem 4rem;
+    padding: 5rem 4rem;
     font-weight: bold;
     font-size: 3rem;
     text-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
 }
 
-#cabecalho .sinopse {
-    width: 66%;
-    padding: 2rem 4rem;
-    font-size: 1.5rem;
-    text-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+main{
+    margin: 0 4rem;
 }
 
-.poster{
-    width: 190px;
-    border-radius: 5px;
-    margin: 1rem 0 3rem 5rem;
+section h2{
+    font-size: 1.5rem;
+    border-left: var(--primary) solid 5px;
+    line-height: 20px;
+    padding-left: 1rem;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.lista-de-botoes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+}
+
+.botoes *{
+    margin: .3rem 0;
+}
+
+.botao{
     background-color: var(--primary);
-    border-radius: 5px;
-    width: 100%;
+    border-radius: 10px;
+    width: 300%;
     text-align: center;
-    padding: 0.5rem 1.6rem;
+    font-size: 1.46rem;
+    padding: .5rem 0;
     transition: filter .2s ease-in-out;
-    margin: 0rem 0.3rem;
 }
 
-.botoes:first-child{
-    margin-left: 4rem;
-}
-
-.botoes:hover{
+.botao:hover{
     filter: drop-shadow(0px 0px 4px var(--primary))
             drop-shadow(0px 0px 9px var(--primary));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media(max-width: 768px){
     header{
         flex-direction: column;
     }
 
-    header h1 a{
+    header h1{
         margin-left: 2rem;
     }
-
-    #cabecalho .sinopse {
-        width: 66%;
-        padding: 2rem 4rem;
-        font-size: 1rem;
-        text-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+@media(max-width: 588px){
+    #hero p{
+        padding: 1rem;
     }
 }
+
+
+
+
+
+

@@ -35,7 +35,7 @@ header .firsta{
 header nav{
     flex-grow: 1;
     display: flex;
-    padding-bottom: 1rem;
+    padding-bottom: 0.8rem;
     
 }
 
@@ -133,7 +133,7 @@ section h2{
 
 .poster{
     width: 190px;
-    border-radius: 110px;
+    border-radius: 10px;
 }
 
 .filme .valor-nota {
