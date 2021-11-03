@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --bg: #87CEFA;
+    --bg2: #212121;
+    --primary: #0F234C;
+    --base: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--base);
+}
+
+body{
+    background-color: var(--bg);
+    font-family: 'roboto', sans-serif;
+}
+
+header{
+    background-color: var(--primary);
+    display: flex;
+}
+
+header .firsta{
+    color: var(--bg);
+    font-family: 'bebas neue', sans-serif;
+    font-size: 4rem;
+    margin-left: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+header nav{
+    flex-grow: 1;
+    display: flex;
+    padding-bottom: 0.8rem;
+    
+}
+
+header ul{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+nav li:last-child{
+    flex: 1;
+    text-align: end;
+}
+
+nav a:hover{
+    color: var(--bg);
+}
+
+nav .ativo{
+    border-bottom: var(--bg) 3px solid;
+    padding: .5rem;
+}
+
+li{
+    list-style: none;
+    margin: 0 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#hero{
+    position: relative;
+    height: 18rem;
+}
+
+/*pseudo-elemento = não existe no HTML*/
+#hero::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(../assets/images/MicrosoftTeams-image\ \(7\).png) center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    filter: opacity(.2);
+    z-index:-1;
+    box-shadow: inset 0px -100px 100px var(--bg);
+}
+
+#hero p {
+    width: 60%;
+    padding: 5rem 4rem;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+main{
+    margin: 0 4rem;
+}
+
+section h2{
+    font-size: 1.5rem;
+    border-left: var(--primary) solid 5px;
+    line-height: 20px;
+    padding-left: 1rem;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.lista-de-info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+}
+
+.filme *{
+    margin: .3rem 0;
+}
+
+.filme .titulo {
+    font-size: 2rem;
+}
+
+.poster{
+    width: 190px;
+    border-radius: 10px;
+}
+
+
+
+.botao:hover{
+    filter: drop-shadow(0px 0px 4px var(--primary))
+            drop-shadow(0px 0px 9px var(--primary));
+}
+
+.lista-de-botoes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+}
+
+.botoes *{
+    margin: .3rem 0;
+}
+
+.botao{
+    background-color: var(--primary);
+    border-radius: 10px;
+    width: 300%;
+    text-align: center;
+    font-size: 1.46rem;
+    padding: .5rem 0;
+    transition: filter .2s ease-in-out;
+}
+
+
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+
+    header h1{
+        margin-left: 2rem;
+    }
+}
+@media(max-width: 588px){
+    #hero p{
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+

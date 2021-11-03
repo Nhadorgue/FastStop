@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastStop</title>
+    <link rel="stylesheet" href="css/stylePosto.css">
+    <!--Se eu quiser o icone em outras páginas vou ter que colocar a mesma linha nas outras paginas-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a class="firsta" href="index.html">FastStop</a></h1>
+        <nav>
+            <ul>
+                <li><a href="Perfil.html">Perfil</a></li>
+                <li><a href="Reservar.html">Reservar</a></li>
+                <li><a href="Carga.html">Carga</a></li>
+                <li><a href="Eletropostos.html">Eletropostos</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="cabecalho">
+        <img class="poster" src="assets/images/carros-compartilhados.jpg" alt="Imagem de uma estação em um eletroposto.">
+        <div class="descricao">
+            <p class="titulo">Posto Genérico</p>
+            <p class="desc">Endereço</p>
+            <p class="desc">Estações disponíveis: 2/5</p>
+            <p class="desc">Loja de Conveniência: Sim</p>
+            <p class="desc">Banheiros: Sim</p>
+        </div>
+        <div class="bandeiras">
+            <p class="titulo">Bandeiras</p>
+            <img class="bandeira" src="assets/images/bandeiras.png" alt="Imagem das bandeiras suportadas pelo eletropost.">
+        </div>
+    </div>
+    <main>
+        <a class="botoes" href="Reservar.html">
+            <span class="material-icons">arrow_back</span>
+            Voltar
+        </a>
+        <input class="btnJS" type="button" onclick="funcao1()" value="Reservar" />
+    </main>
+
+    <script>
+        function funcao1()
+        {
+            alert("Estação reservada!");
+        }
+    </script>
+
+</body>
+</html>
