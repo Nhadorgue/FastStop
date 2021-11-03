@@ -148,6 +148,11 @@ section h2{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.lista-de-botoes-bene{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .botoes{
     display: flex;
@@ -155,12 +160,22 @@ section h2{
     align-items: center;
     margin: .5rem;
 }
+.botoes-bene{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+}
 
-.botoes *{
+.botoes-bene *{
     margin: .3rem 0;
 }
 
-.botao{
+.botoes-bene *{
+    margin: .3rem 0;
+}
+
+.botaoResgatar{
     background-color: var(--primary);
     border-radius: 10px;
     width: 300%;
